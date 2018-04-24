@@ -1,0 +1,15 @@
+<h1>Restaurante FomeZero</h1>
+<h2>Pratos:</h2>
+<% @dishes.each do |dish| %>
+  <hr>
+  <h3>Nome:</h3>
+  <h2><%= dish.description %></h2>
+  <h3>Ingredientes:</h3>
+  <h5>
+    <% dish.ingredients.each do | ingredient| %>
+      <%= ingredient.description + " | " %>
+    <% end %>
+  </h5>
+  <p>Preço: R$<%= dish.price %>0</p>
+  <h4>Tempo de Preparo: <%= dish.time %></h4>
+<% end %>

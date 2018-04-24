@@ -12,6 +12,10 @@ class IngredientsController < ApplicationController
   def show
   end
 
+  def homepage
+    @ingredients = Ingredient.all.order("created_at desc")
+  end
+
   # GET /ingredients/new
   def new
     @ingredient = Ingredient.new

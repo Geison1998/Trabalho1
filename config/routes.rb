@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'dishes#homepage'
+
   resources :ingredients
   resources :dishes
   resources :restaurants
